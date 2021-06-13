@@ -1,0 +1,29 @@
+<button type="button" (click)="refresh()">Refresh</button>
+<button type="button" (click)="add()">Add</button>
+<table>
+    <caption>All List</caption>
+    <thead>
+    <tr>
+        <th style="width: 2rem; text-align: center"></th>
+        <th>id</th>
+        <th>name</th>
+        <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let todo of todos$ | async">
+        <td style="width: 2rem; text-align: center">
+            <input type="checkbox" [checked]="todo.isDone">
+        </td>
+        <td>
+            {{ todo.id }}
+        </td>
+        <td>
+            {{ todo.name }}
+        </td>
+        <td>
+            {{ todo.isFavourite }}
+        </td>
+    </tr>
+    </tbody>
+</table>
