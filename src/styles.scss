@@ -303,3 +303,18 @@ table {
     padding: 5px 8px;
   }
 }
+
+ html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}

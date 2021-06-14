@@ -3,6 +3,12 @@ import { CommonModule } from '@angular/common';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoFavouriteListComponent } from './components/todo-favourite-list/todo-favourite-list.component';
 import { TodoDoneListComponent } from './components/todo-done-list/todo-done-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatListModule } from '@angular/material/list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -18,7 +24,12 @@ import { TodoDoneListComponent } from './components/todo-done-list/todo-done-lis
         TodoDoneListComponent
     ],
     imports: [
-        CommonModule
+        CommonModule,
+        MatListModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        FormsModule,
+        MatIconModule
     ]
 })
 export class TodoModule { }

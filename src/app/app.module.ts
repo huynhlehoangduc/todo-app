@@ -9,6 +9,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HighlightCardComponent } from './components/highlight-card/highlight-card.component';
 import { TodoModule } from './features/todo/todo.module';
 import { todoReducer } from './features/todo/store/todo.reducers';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -20,7 +21,8 @@ import { todoReducer } from './features/todo/store/todo.reducers';
         BrowserModule,
         StoreModule.forRoot({ todo: todoReducer }, {}),
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production }),
-        TodoModule
+        TodoModule,
+        BrowserAnimationsModule
     ],
     providers: [],
     bootstrap: [AppComponent]
