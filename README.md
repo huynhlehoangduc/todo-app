@@ -1,6 +1,7 @@
 # TodoApp
 
 ## Todo App with ngrx.
+Project to help we to learn ngrx/store, unitest angular
 
 ### Requirement:
 The application will has a screen, Which split into 2 part:
