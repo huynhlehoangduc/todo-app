@@ -7,3 +7,4 @@ export const listDone = createAction('[Todo] List done');
 
 export const add = createAction('[Todo] add', props<{ todo: Todo}>());
 export const update = createAction('[Todo] update', props<{ todo: Todo }>());
+export const deleteTodo = createAction('[Todo] delete', props<{ id: number }>());

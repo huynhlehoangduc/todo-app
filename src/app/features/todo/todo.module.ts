@@ -7,8 +7,15 @@ import { MatTableModule } from '@angular/material/table';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { TodoBaseListComponent } from './components/todo-base-list/todo-base-list.component';
+import { TodoEditDialogComponent } from './components/todo-edit-dialog/todo-edit-dialog.component';
+import { OverlayModule } from '@angular/cdk/overlay';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 
@@ -16,7 +23,9 @@ import { MatIconModule } from '@angular/material/icon';
     declarations: [
         TodoListComponent,
         TodoFavouriteListComponent,
-        TodoDoneListComponent
+        TodoDoneListComponent,
+        TodoBaseListComponent,
+        TodoEditDialogComponent
     ],
     exports: [
         TodoListComponent,
@@ -29,7 +38,13 @@ import { MatIconModule } from '@angular/material/icon';
         MatButtonModule,
         MatCheckboxModule,
         FormsModule,
-        MatIconModule
-    ]
+        MatIconModule,
+        OverlayModule,
+        MatDialogModule,
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule,
+        MatTooltipModule
+    ],
 })
 export class TodoModule { }

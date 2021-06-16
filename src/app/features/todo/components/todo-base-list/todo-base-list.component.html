@@ -1,0 +1,54 @@
+<button mat-raised-button
+        color="accent"
+        [style.visibility]="showRefreshBtn ? 'visible' : 'hidden' "
+        class="mr-5"
+        (click)="refresh()">Refresh
+</button>
+<button mat-raised-button
+        color="primary"
+        class="mr-5"
+        [style.visibility]="showAddBtn ? 'visible' : 'hidden' "
+        (click)="edit()">Add
+</button>
+<button mat-raised-button
+        color="primary"
+        [style.visibility]="showAddBtn ? 'visible' : 'hidden' "
+        (click)="addRamDom()">Add Random
+</button>
+
+<h2 class="title">{{ title }}</h2>
+
+
+<mat-list *ngIf="todos?.length; else emptyBlock">
+    <mat-list-item *ngFor="let todo of todos">
+        <div class="todo--item w-100">
+            <mat-checkbox
+                class="mr-2"
+                [checked]="todo.isDone"
+                (change)="checkDone($event, todo.id)"
+                matTooltip="Mark as Done"
+            ></mat-checkbox>
+            <span (click)="edit(todo)"
+                  matTooltip="Edit it!"
+                  class="cursor-pointer">{{todo.name}}</span>
+            <div class="todo--action">
+                <mat-icon aria-hidden="false"
+                          aria-label="star"
+                          (click)="checkFavourite(todo)"
+                          matTooltip="Mark as Favourite"
+                          [class.favourite]="todo.isFavourite">{{ todo.isFavourite ? 'star' : 'star_border' }}
+                </mat-icon>
+                <mat-icon aria-hidden="false"
+                          aria-label="star"
+                          matTooltip="Deleted it!"
+                          class="todo--action-delete"
+                          (click)="delete(todo.id)"
+                >delete_outline</mat-icon>
+            </div>
+        </div>
+    </mat-list-item>
+</mat-list>
+<ng-template #emptyBlock>
+    <p style="border-bottom: 2px solid #ddd; padding: 1rem">empty</p>
+</ng-template>
+

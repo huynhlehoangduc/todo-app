@@ -1,0 +1,31 @@
+.todo--item {
+  display: flex;
+  position: relative;
+  &:hover .todo--action-delete {
+    opacity: 1;
+  }
+}
+
+.todo--action {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  .favourite {
+    color: yellow;
+  }
+}
+
+.title {
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 0;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.todo--action-delete {
+  opacity: 0;
+  transition: 0.3s all ease-in;
+}
