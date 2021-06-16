@@ -46,5 +46,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
         ReactiveFormsModule,
         MatTooltipModule
     ],
+    entryComponents: [
+        TodoEditDialogComponent
+    ]
 })
 export class TodoModule { }
